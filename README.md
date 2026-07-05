@@ -1,0 +1,104 @@
+# Gaming Revenue Analytics
+
+[Ukrainian version](README_ua.md)
+
+## Project Overview
+
+This project analyzes revenue metrics for a gaming product from March to December 2022.
+
+The goal of the analysis is to evaluate revenue dynamics, paid users, average revenue per paid user, user churn, and the main factors that influenced monthly recurring revenue.
+
+## Tools
+
+- PostgreSQL
+- Tableau Public
+- GitHub
+
+## Data Sources
+
+The analysis is based on two tables:
+
+- `project.games_payments`: user payment data
+- `project.games_paid_users`: paid user attributes
+
+## Key Metrics
+
+- Total Revenue: total revenue
+- Paid Users: number of paying users
+- ARPPU: average revenue per paid user
+- New MRR: monthly recurring revenue from new paying users
+- Expansion MRR: revenue increase from existing paying users
+- Contraction MRR: revenue decrease from existing paying users
+- Churned Revenue: revenue lost because of churned users
+- Churn Rate: share of users who stopped paying
+- LT: customer lifetime
+- LTV: customer lifetime value
+
+## Dashboard Structure
+
+The Tableau dashboard includes:
+
+- KPI cards
+- Revenue and Paid Users Trend
+- ARPPU Trend by Language
+- Revenue Drivers
+- Users Movement
+- Expansion vs Contraction Analysis
+
+## Data Quality Notes
+
+During the data quality check, one payment looked like a possible duplicate.
+
+This row was not removed because the dataset does not contain a `transaction_id` or an exact payment timestamp. Because of this, it is not possible to clearly define whether this row is a technical duplicate or a real repeated payment.
+
+## Metric Notes
+
+LT and LTV were calculated as simplified monthly metrics based on Churn Rate.
+
+Part of the metrics was calculated in SQL, and part of the analysis was completed using calculated fields in Tableau.
+
+## Dashboard Insights
+
+From March to December 2022, the gaming product generally showed growth in revenue and paid audience. Total Revenue for the period was 63,141 USD, and the number of Paid Users was 383.
+
+The strongest growth was observed before October. In October, the product reached the highest monthly revenue. After that, revenue declined in November. In December, revenue partly recovered, but it did not return to the October level.
+
+This decline could have happened for several reasons:
+
+- some users stopped paying after previous purchases;
+- some existing users stayed in the product but started paying less;
+- promotions, seasonal campaigns, or in-game events that previously stimulated purchases may have ended;
+- new paid users continued to appear, but their revenue was not enough to fully cover losses from churn and contraction.
+
+Revenue Drivers show that growth was supported by New MRR, Expansion MRR, and users who returned after churn. At the same time, Churned Revenue and Contraction MRR noticeably reduced the final result.
+
+Users Movement shows that the product attracted new paid users, but also lost part of the existing paid user base. This means that the main issue is not only user acquisition, but also retention of users who already pay.
+
+ARPPU Trend by Language shows that different language groups may have different payment behavior. This can be useful for further user segmentation and for finding groups that generate the highest revenue.
+
+## Business Conclusions
+
+The product shows growth, but this growth is not fully stable. Before October, revenue and the paid audience increased, but after the peak month the business lost part of its revenue. This means that the product has potential to earn more, but part of the revenue is currently lost because of user churn and lower payments from the existing paid user base.
+
+The main business issue is not only how to attract new paid users. It is also important to retain users who already pay and understand why some of them stop paying or start paying less.
+
+November should be analyzed separately because the revenue decline happened right after the October peak. This may be connected with the end of promotions, seasonal campaigns, in-game events, product changes, or the behavior of specific user segments.
+
+For the business, the next focus should be not only growth, but also the quality of this growth. If new users come in, but existing users quickly stop paying or reduce their payments, revenue will remain unstable.
+
+Recommended next steps:
+
+- identify which user segments caused the largest revenue loss;
+- analyze users who started paying less;
+- investigate churn reasons after October;
+- compare user behavior by language, game, age group, and device type;
+- find segments with the highest ARPPU;
+- test mechanics that can stimulate repeat payments and user reactivation.
+
+Overall conclusion: the product has potential for further growth, but for stable revenue the business should focus not only on attracting new paid users, but also on retaining the existing paid user base and reducing revenue losses.
+
+## Repository Structure
+
+- `data/revenue_metrics_tableau_data.csv`: dataset used for Tableau
+- `sql/revenue_metrics_analysis.sql`: SQL logic, data quality checks, and metric calculations
+- `README_ua.md`: Ukrainian project description
