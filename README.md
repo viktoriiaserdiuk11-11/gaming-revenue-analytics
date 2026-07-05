@@ -1,5 +1,7 @@
 # Gaming Revenue Analytics
 
+[Dashboard in Tableau Public](https://public.tableau.com/app/profile/viktoriia.serdiuk/viz/Revenue_Metrics_17832571347680/RevenueMetrics)
+
 [Ukrainian version](README_ua.md)
 
 ## Project Overview
@@ -27,8 +29,10 @@ The analysis is based on two tables:
 - Paid Users: number of paying users
 - ARPPU: average revenue per paid user
 - New MRR: monthly recurring revenue from new paying users
+- New Paid Users: users who made their first payment
 - Expansion MRR: revenue increase from existing paying users
 - Contraction MRR: revenue decrease from existing paying users
+- Back-from-Churn MRR: revenue from users who returned after churn
 - Churned Revenue: revenue lost because of churned users
 - Churn Rate: share of users who stopped paying
 - LT: customer lifetime
@@ -41,9 +45,9 @@ The Tableau dashboard includes:
 - KPI cards
 - Revenue and Paid Users Trend
 - ARPPU Trend by Language
-- Revenue Drivers
+- Churn Risk by Segment
 - Users Movement
-- Expansion vs Contraction Analysis
+- Revenue Factors by Month
 
 ## Data Quality Notes
 
@@ -70,9 +74,11 @@ This decline could have happened for several reasons:
 - promotions, seasonal campaigns, or in-game events that previously stimulated purchases may have ended;
 - new paid users continued to appear, but their revenue was not enough to fully cover losses from churn and contraction.
 
-Revenue Drivers show that growth was supported by New MRR, Expansion MRR, and users who returned after churn. At the same time, Churned Revenue and Contraction MRR noticeably reduced the final result.
+Revenue Factors by Month shows how different revenue factors affected monthly revenue changes. Growth was supported by New MRR, Expansion MRR, and Back-from-Churn MRR. At the same time, Contraction and Churned Revenue Loss reduced the final result.
 
-Users Movement shows that the product attracted new paid users, but also lost part of the existing paid user base. This means that the main issue is not only user acquisition, but also retention of users who already pay.
+Users Movement shows how the paid user base changed from month to month. The product attracted new paid users and returned users, but also lost part of the existing paid user base through churn.
+
+Churn Risk by Segment shows that churn is not evenly distributed across user groups. The highest churn risk is observed in the 35+ age group across all language segments. This segment should be checked separately in further churn analysis.
 
 ARPPU Trend by Language shows that different language groups may have different payment behavior. This can be useful for further user segmentation and for finding groups that generate the highest revenue.
 
@@ -84,6 +90,8 @@ The main business issue is not only how to attract new paid users. It is also im
 
 November should be analyzed separately because the revenue decline happened right after the October peak. This may be connected with the end of promotions, seasonal campaigns, in-game events, product changes, or the behavior of specific user segments.
 
+The churn analysis shows that the 35+ age group has the highest churn risk across language segments. This does not explain the full revenue decline by itself, but it gives the business a clear segment for deeper investigation.
+
 For the business, the next focus should be not only growth, but also the quality of this growth. If new users come in, but existing users quickly stop paying or reduce their payments, revenue will remain unstable.
 
 Recommended next steps:
@@ -92,6 +100,7 @@ Recommended next steps:
 - analyze users who started paying less;
 - investigate churn reasons after October;
 - compare user behavior by language, game, age group, and device type;
+- check why the 35+ age group has the highest churn risk;
 - find segments with the highest ARPPU;
 - test mechanics that can stimulate repeat payments and user reactivation.
 
