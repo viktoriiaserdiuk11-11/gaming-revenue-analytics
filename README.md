@@ -88,9 +88,15 @@ ARPPU Trend by Language shows that different language groups may have different 
 
 ## Business Conclusions
 
-The product shows growth, but this growth is not fully stable. Before October, revenue and the paid audience increased, but after the peak month the business lost part of its revenue. This means that the product has potential to earn more, but part of the revenue is currently lost because of user churn and lower payments from the existing paid user base.
+The product shows growth, but this growth is not fully stable. Before October, revenue and the paid audience increased, but after the peak month the business lost part of its revenue. This means that the product has potential to earn more, but part of the revenue is currently lost because of user churn, contraction, and lower payments from the existing paid user base.
 
 The main business issue is not only how to attract new paid users. It is also important to retain users who already pay and understand why some of them stop paying or start paying less.
+
+The updated Users Movement and Revenue Factors by Month charts show that the paid user base and revenue are not driven only by new users.
+
+Users Movement shows that each month includes a significant share of Existing Paid Users, meaning users who were already paying before and continued paying in the current month. This means that the product has a stable paid user base and does not rely only on new users or returned users.
+
+Revenue Factors by Month shows that a significant part of monthly revenue comes from Existing Players Revenue. This is an important business signal: retaining the existing paying player base directly affects revenue stability.
 
 November should be analyzed separately because the revenue decline happened right after the October peak. This may be connected with the end of promotions, seasonal campaigns, in-game events, product changes, or the behavior of specific user segments.
 
@@ -106,9 +112,11 @@ Recommended next steps:
 - compare user behavior by language, game, age group, and device type;
 - check why the 35+ age group has the highest churn risk;
 - find segments with the highest ARPPU;
+- analyze the share of Existing Paid Users in the paid user base;
+- monitor Existing Players Revenue as a key source of revenue stability;
 - test mechanics that can stimulate repeat payments and user reactivation.
 
-Overall conclusion: the product has potential for further growth, but for stable revenue the business should focus not only on attracting new paid users, but also on retaining the existing paid user base and reducing revenue losses.
+Overall conclusion: the product has potential for further growth, but for stable revenue the business should focus not only on attracting new paid users, but also on retaining existing paying players, reducing churn, and controlling contraction.
 
 ## Repository Structure
 
